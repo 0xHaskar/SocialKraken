@@ -11,8 +11,4 @@ os.system('pip3 install -r requerements.txt')
 print("=============================")
 print("Откройте api.py и впишите туда токен ngrok")
 
-os.chdir('..')
-os.chdir('..')
-os.chdir('..')
-
 

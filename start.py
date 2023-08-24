@@ -34,8 +34,9 @@ Developed by 0xHaskar
 print('''
       Программное обеспечение представлено исключительно
       в информационных целях и предназначено только для ознакомления! 
-      Скачивая программу, вы соглашаетесь с тем,
+      Используя программу, вы соглашаетесь с тем,
       что все действия находятся на вашей ответственности и совести! 
+      Автор не несет ответственность за ваши действия!
       Вы согласны со всем, что написано на этой странице!
       ''')
 
@@ -52,7 +53,7 @@ if (select == 'Да') or (select == 'да') or (select == 'lf'):
 悗f篝嚠篩i縒縡齢　　 　 Ⅷ辨f
 輯駲f迯瓲i軌帶′　　　　　守I厖孩
 
-SocialKraken 1.0 Beta
+SocialKraken 1.2 Beta
 Developed by 0xHaskar
 ''')
    
@@ -74,49 +75,97 @@ Developed by 0xHaskar
                hiddeneye
                hiddeneye install
                
+            Snoop - инструмент разведки на основе открытых данных по нику
+               snoop
+               snoop install
+               # https://github.com/snooppr/snoop
+               
+            Dnnme2 - фейк бот ТГ
+               dnnme2
+               dnnme2 install
+               # гайд -> https://telegra.ph/Sozdaem-bota-dlya-deanonimizacii-04-26
+               
             Maltego:
-               maltego
+               maltego - запуск
         ''')
 
+      #AhMyth
       elif select == "ahmyth":
-         print('\U0001F985' + colr.END + colr.CYAN + ' AhMyth start')
+         print('\U0001F985' + colr.END + colr.GREEN + ' AhMyth start' + colr.CYAN)
          os.system('gnome-terminal -- bash -c "sudo ahmyth --no-sandbox; exec bash"')
          
       elif select == "ahmyth install":
-         print('\U0001F985' + colr.END + colr.CYAN + ' AhMyth install:')
+         print('\U0001F985' + colr.END + colr.GREEN + ' AhMyth install:' + colr.CYAN)
          dir = os.getcwd()
          os.chdir(dir + "/modules/AhMyth/")
          os.system("python3 ahmyth.py")
-         
+      
+      #BigBro   
       elif select == "bigbro":
-         print(colr.END + colr.CYAN + ' BigBro start:')
+         print(colr.END + colr.GREEN + ' BigBro start:' + colr.CYAN)
          dir = os.getcwd()
          os.chdir(dir + "/modules/BigBro/Bigbro")
          os.system("python3 start.py")
          
          
       elif select == "bigbro install":
-         print(colr.END + colr.CYAN + ' BigBro install:')
+         print(colr.END + colr.GREEN + ' BigBro install:' + colr.CYAN)
          dir = os.getcwd()
          os.chdir(dir + "/modules/BigBro/")
          os.system("python3 bigbro.py")
 
-
+      #HiddenEye
       elif select == "hiddeneye":
-         print(colr.END + colr.CYAN + ' HiddenEye install:')
+         print(colr.END + colr.GREEN + ' HiddenEye install:' + colr.CYAN)
          dir = os.getcwd()
          os.chdir(dir + "/modules/HiddenEye/HiddenEye")
          os.system("python3 HiddenEye.py")
       
       elif select == "hiddeneye install":
-               print(colr.END + colr.CYAN + ' HiddenEye install:')
+               print(colr.END + colr.GREEN + ' HiddenEye install:'+ colr.CYAN)
                dir = os.getcwd()
                os.chdir(dir + "/modules/HiddenEye/")
                os.system("python3 hiddeneye.py")
+      #snoop    
+      elif select == "snoop":
+         print (colr.END + colr.GREEN + ' start snoop' + colr.CYAN)
+         dir = os.getcwd()
+         os.chdir(dir + "/modules/Snoop/")
+         user = input("Username: ")
+         os.system('gnome-terminal -- bash -c "./snoop_cli ' + user +'; exec bash"')
+         os.chdir("..")
+         os.chdir("..")
+         
+      elif select == "snoop install":
+         print(colr.END + colr.GREEN + " install snoop github" + colr.CYAN)
+         dir = os.getcwd()
+         os.chdir(dir + "/modules/Snoop/")
+         os.system('gnome-terminal -- bash -c "python3 snoop.py; exec bash"')
+         os.chdir("..")
+         os.chdir("..")
+          
+      #Dnnme2
+      elif select == "dnnme2":
+         print(colr.END + colr.GREEN + " Start Dnnme2" + colr.CYAN)
+         dir = os.getcwd()
+         os.chdir(dir + "/modules/Dnnme2/Dnnme2")
+         os.system('gnome-terminal -- bash -c "python3 build.py; exec bash"')
+         os.chdir("..")
+         os.chdir("..")
+         os.chdir("..")
       
-      
+      elif select == "dnnme2 install":
+         print(colr.END + colr.GREEN + " Start Dnnme2" + colr.CYAN)
+         dir = os.getcwd()
+         os.chdir(dir + "/modules/Dnnme2/")
+         os.system('gnome-terminal -- bash -c "python3 dnnme2.py; exec bash"')
+         #os.system("python3 dnnme2.py")
+         os.chdir("..")
+         os.chdir("..")
+         
+      #Maltego
       elif select == "maltego":
-         print(colr.END + colr.CYAN + '\U0001F441' + ' Maltego start:')
+         print(colr.END + colr.GREEN + '\U0001F441' + ' Maltego start:' + colr.CYAN)
          os.system('gnome-terminal -- bash -c "maltego; exec bash"')
          
       
