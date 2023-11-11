@@ -10,8 +10,6 @@ You agree with everything written on this page!
 [+] Snoop
 [+] Dnnme2
 ```
-
-![Header](https://github.com/0xHaskar/SocialKraken/blob/main/icons/krakenlogo.png)
 ### Updates SocialKraken b1.0:
 ```bash
 [+] HiddenEye
