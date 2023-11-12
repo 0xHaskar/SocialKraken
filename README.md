@@ -1,4 +1,4 @@
-![Header](https://github.com/0xHaskar/SocialKraken/blob/main/icons/krakenlogo_1.2.png)
+![Header](https://github.com/0xHaskar/SocialKraken/blob/main/icons/krakenlogo_1.png)
 
 ### !Warning!
 The software is presented for informational purposes only and is intended for reference only!
