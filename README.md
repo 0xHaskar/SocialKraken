@@ -10,7 +10,9 @@ Updates SocialKraken b1.4:
 ```bash
 [+] OSINT-SAN
 [+] Zehef
-[+] Error correction - исправление ошибок
+--------
+[+] Error correction - Исправление ошибок
+[+] Added Easter egg - Добавлена пасхалка
 ```
 
 Updates SocialKraken b1.2:
