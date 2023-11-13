@@ -32,17 +32,19 @@ Developed by 0xHaskar
 ''')
 #print(colr.BLUE + colr.BOLD + '1. First Blood'+ u'\U0001FA78')
 print('''
-      Программное обеспечение представлено исключительно
-      в информационных целях и предназначено только для ознакомления! 
-      Используя программу, вы соглашаетесь с тем,
-      что все действия находятся на вашей ответственности и совести! 
-      Автор не несет ответственность за ваши действия!
-      Вы согласны со всем, что написано на этой странице!
+         +----------------------------------------------------------------+          
+   (__)  |Программное обеспечение представлено исключительно              |
+(|)(00)  |в информационных целях и предназначено только для ознакомления! | 
+ |/(__)\ |Используя программу, вы соглашаетесь с тем,                     |
+ |_/ _|  |что все действия находятся на вашей ответственности и совести!  | 
+         |Автор не несет ответственность за ваши действия!                |
+         |Вы согласны со всем, что написано на этой странице!             |
+         +----------------------------------------------------------------+
       ''')
 
 select = input('Принять? Да/Нет: ')
 
-if (select == 'Да') or (select == 'да') or (select == 'lf'):
+if (select == 'Да') or (select == 'да') or (select == 'lf') or (select == 'yes'):
    os.system("clear")
    
    print(colr.GREEN + colr.BOLD + '''
@@ -53,19 +55,26 @@ if (select == 'Да') or (select == 'да') or (select == 'lf'):
 悗f篝嚠篩i縒縡齢　　 　 Ⅷ辨f
 輯駲f迯瓲i軌帶′　　　　　守I厖孩
 
-SocialKraken 1.2 Beta
+SocialKraken 1.4 Beta
 Developed by 0xHaskar
 ''')
    
-   print('Напиши help')
+   
+   print(colr.END + colr.RED + 'Напиши help')
    while True:
-      select = input(colr.BLUE + colr.BOLD + "> ")
+      #select = input(colr.BLUE + colr.BOLD + '\U0001F419' + "> ")
+      select = input(colr.BLUE + colr.BOLD + 'SocialKreaken ' + "> ")
       if select == "help":
          print(colr.END + colr.CYAN + '''
             AhMyth - android RAT:
                ahmyth 
                ahmyth install
                
+            OSINT-SAN - Бесплатный и общедоступный OSINT SAN Framework
+               osint-san -- запуск
+               osint-san install -- установка 
+            #https://github.com/Bafomet666/OSINT-SAN
+            
             BigBro - geolocation:
                bigbro 
                bigbro install
@@ -85,11 +94,23 @@ Developed by 0xHaskar
                dnnme2 install
                # гайд -> https://telegra.ph/Sozdaem-bota-dlya-deanonimizacii-04-26
                
+            Zehef - для отслеживания электронной почты (Нестабильный, ошибки)
+               zehef
+               zehef install
+               
+            Sherlock:
+               sherlock
+               sherlock install
+               
             Maltego:
                maltego - запуск
-        ''')
+               maltego install - установка
+               
+         Exploits:
+            В разработке!
+      ''')
 
-      #AhMyth
+      # AhMyth
       elif select == "ahmyth":
          print('\U0001F985' + colr.END + colr.GREEN + ' AhMyth start' + colr.CYAN)
          os.system('gnome-terminal -- bash -c "sudo ahmyth --no-sandbox; exec bash"')
@@ -99,8 +120,26 @@ Developed by 0xHaskar
          dir = os.getcwd()
          os.chdir(dir + "/modules/AhMyth/")
          os.system("python3 ahmyth.py")
-      
-      #BigBro   
+         
+      # OSINT-SAN
+      elif select == "osint-san" or select == "san":
+         print (colr.END + colr.GREEN + ' OSINT-SAN start' + colr.CYAN)
+         dir = os.getcwd()
+         os.chdir(dir + "/modules/OSINT-SAN/OSINT-SAN/")
+         os.system('gnome-terminal -- bash -c "python3 osintsan.py; exec bash"')
+         os.chdir("..")
+         os.chdir("..")
+         os.chdir("..")
+
+      elif select == "osint-san install" or select == "san install":
+         print (colr.END + colr.GREEN + ' OSINT-SAN install' + colr.CYAN)
+         dir = os.getcwd()
+         os.chdir(dir + "/modules/OSINT-SAN/")
+         os.system('gnome-terminal -- bash -c "python3 osintsan.py; exec bash"')
+         os.chdir("..")
+         os.chdir("..")
+         
+      # BigBro   
       elif select == "bigbro":
          print(colr.END + colr.GREEN + ' BigBro start:' + colr.CYAN)
          dir = os.getcwd()
@@ -114,9 +153,9 @@ Developed by 0xHaskar
          os.chdir(dir + "/modules/BigBro/")
          os.system("python3 bigbro.py")
 
-      #HiddenEye
+      # HiddenEye
       elif select == "hiddeneye":
-         print(colr.END + colr.GREEN + ' HiddenEye install:' + colr.CYAN)
+         print(colr.END + colr.GREEN + ' HiddenEye start:' + colr.CYAN)
          dir = os.getcwd()
          os.chdir(dir + "/modules/HiddenEye/HiddenEye")
          os.system("python3 HiddenEye.py")
@@ -126,7 +165,7 @@ Developed by 0xHaskar
                dir = os.getcwd()
                os.chdir(dir + "/modules/HiddenEye/")
                os.system("python3 hiddeneye.py")
-      #snoop    
+      # snoop    
       elif select == "snoop":
          print (colr.END + colr.GREEN + ' start snoop' + colr.CYAN)
          dir = os.getcwd()
@@ -143,10 +182,10 @@ Developed by 0xHaskar
          os.system('gnome-terminal -- bash -c "python3 snoop.py; exec bash"')
          os.chdir("..")
          os.chdir("..")
-          
-      #Dnnme2
+         
+      # Dnnme2
       elif select == "dnnme2":
-         print(colr.END + colr.GREEN + " Start Dnnme2" + colr.CYAN)
+         print(colr.END + colr.GREEN + " Dnnme2 start " + colr.CYAN)
          dir = os.getcwd()
          os.chdir(dir + "/modules/Dnnme2/Dnnme2")
          os.system('gnome-terminal -- bash -c "python3 build.py; exec bash"')
@@ -155,20 +194,53 @@ Developed by 0xHaskar
          os.chdir("..")
       
       elif select == "dnnme2 install":
-         print(colr.END + colr.GREEN + " Start Dnnme2" + colr.CYAN)
+         print(colr.END + colr.GREEN + " Dnnme2 install" + colr.CYAN)
          dir = os.getcwd()
          os.chdir(dir + "/modules/Dnnme2/")
          os.system('gnome-terminal -- bash -c "python3 dnnme2.py; exec bash"')
-         #os.system("python3 dnnme2.py")
          os.chdir("..")
          os.chdir("..")
          
-      #Maltego
+      # Zehef
+      elif select == "zehef":
+         print(colr.END + colr.GREEN + " Zehef start " + colr.CYAN)
+         dir = os.getcwd()
+         os.chdir(dir + "/modules/Zehef/Zehef")
+         os.system('gnome-terminal -- bash -c "python3 zehef.py; exec bash"')
+         os.chdir("..")
+         os.chdir("..")
+         os.chdir("..")
+      
+      elif select == "zehef install":
+         print(colr.END + colr.GREEN + " Zehef install" + colr.CYAN)
+         dir = os.getcwd()
+         os.chdir(dir + "/modules/Zehef/")
+         os.system('gnome-terminal -- bash -c "python3 zehef.py; exec bash"')
+         os.chdir("..")
+         os.chdir("..")
+         
+      # Maltego
       elif select == "maltego":
          print(colr.END + colr.GREEN + '\U0001F441' + ' Maltego start:' + colr.CYAN)
          os.system('gnome-terminal -- bash -c "maltego; exec bash"')
-         
+      
+      elif select == "maltego install":
+            print(colr.END + colr.GREEN + '\U0001F441' + ' Maltego install:' + colr.CYAN)
+            os.system('gnome-terminal -- bash -c "sudo apt install maltego; exec bash"')
+            
+      # Sherlock
+      elif select == "sherlock":
+         print(colr.END + colr.GREEN + 'Sherlock start:' + colr.CYAN)
+         os.system('gnome-terminal -- bash -c "sherlock; exec bash"')
+      
+      elif select == "sherlock install":
+         print(colr.END + colr.GREEN + 'Sherlock install:' + colr.CYAN)
+         os.system('gnome-terminal -- bash -c "sudo apt install sherlock; exec bash"')
+            
       
    
-elif (select == 'Нет') or (select == 'нет'): 
+elif (select == 'Нет') or (select == 'нет') or (select == 'no') or (select == 'not'): 
+   print(colr.BLUE + colr.BOLD + 'Пока ^-^')
+   
+else: 
    print(colr.BLUE + colr.BOLD + 'Пока ^-^')
