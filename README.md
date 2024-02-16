@@ -31,8 +31,13 @@ Updates SocialKraken b1.0:
 ```bash
 1. sudo apt update
 2. sudo apt install gnome-terminal
-3. git clone https://github.com/0xHaskar/SocialKraken.git
-4. python3 start.py
+3. pip3 install pyqt5 
+4. git clone https://github.com/0xHaskar/SocialKraken.git
+5. python3 start.py
+```
+### The password is encrypted:
+```
+U1M=
 ```
 ### Thank you:
 ```bash
