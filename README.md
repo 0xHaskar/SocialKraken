@@ -1,5 +1,5 @@
 ![Header](https://github.com/0xHaskar/SocialKraken/blob/main/icons/krakenlogo_1.png)
-
+## Remake Global - everything starts in a new way! Wait!
 ### !Warning!
 The software is presented for informational purposes only and is intended for reference only!
 By downloading the program, you agree that all actions are on your responsibility and conscience!
