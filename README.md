@@ -38,5 +38,3 @@ U1M=
 ```
 ### Screenshot:
 ![Header](https://github.com/0xHaskar/SocialKraken/blob/main/icons/socialkraken_1.png)
-![Header](https://github.com/0xHaskar/SocialKraken/blob/main/icons/socialkraken_2.png)
-![Header](https://github.com/0xHaskar/SocialKraken/blob/main/icons/socialkraken_3.png)
