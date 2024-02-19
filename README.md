@@ -6,26 +6,9 @@ By downloading the program, you agree that all actions are on your responsibilit
 You agree with everything written on this page!
 
 ### Changes log:
-Updates SocialKraken b1.4:
+Updates SocialKraken b2.0 (Remake):
 ```bash
-[+] OSINT-SAN
-[+] Zehef
---------
-[+] Error correction - Исправление ошибок
-[+] Added Easter egg - Добавлена пасхалка
-```
-
-Updates SocialKraken b1.2:
-```bash
-[+] Snoop
-[+] Dnnme2
-```
-Updates SocialKraken b1.0:
-```bash
-[+] HiddenEye
-[+] BigBro
-[+] AhMyth
-[+] Maltego
+In developing
 ```
 ### Install:
 ```bash
