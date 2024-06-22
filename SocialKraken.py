@@ -1,154 +1,247 @@
-import sys
+# -*- coding: UTF-8 -*-
 import os
-import subprocess
-from PyQt5.QtWidgets import QApplication, QMainWindow, QMenuBar, QMenu, QAction, QFrame, QVBoxLayout, QWidget, QPlainTextEdit, QLineEdit
-from PyQt5.QtCore import Qt
-
-#окна
-#from info import InfoWindow
-
-class MainWindow(QMainWindow):
-    def __init__(self):
-        super().__init__()
-
-        self.setWindowTitle("SocialKraken")
-        self.setGeometry(100, 100, 1000, 550)
-
-        menubar = self.menuBar()
-
-        # Создаем меню
-        help_menu = menubar.addMenu("Menu")
-        social_menu = menubar.addMenu("Social")
-        osint_menu = menubar.addMenu("Osint")
-        leaks_menu = menubar.addMenu("Leaks")
-        malware_menu = menubar.addMenu("Malware")
-        protect_menu = menubar.addMenu("Protect")
-
-        # Создаем подкатегории в Menu
-        help_action = QAction("Help", self)
-        info_action = QAction("Info", self)
-        modules_action = QAction("Modules", self)
-        
-        # Создаем подкатегории в Social
-        beef_xss_action = QAction("beef-xss", self)
-        zphisher_action = QAction("zphisher", self)
-        
-        # Создаем подкатегории в Osint
-        snoop_action = QAction("Snoop", self)
-        ghunt_action = QAction("Ghunt", self)
-        
-        # Создаем подкатегории в Malware
-        discrod_rat_action = QAction("Malware (Discord-RAT)", self)
 
 
+class colr:
+   PURPLE = '\033[95m'
+   CYAN = '\033[96m'
+   DARKCYAN = '\033[36m'
+   BLUE = '\033[94m'
+   GREEN = '\033[92m'
+   YELLOW = '\033[93m'
+   RED = '\033[91m'
+   BOLD = '\033[1m'
+   UNDERLINE = '\033[4m'
+   END = '\033[0m'
+
+#emoji
+#print(u'\U0001F441') eye
+#print(u'\U0001FA78') blood
+#print(u'\U0001F3C1') finish
+
+#os.system('gnome-terminal -e "bash -c nmap;bash"')
+
+print(colr.GREEN + colr.BOLD + '''
+殪幢緻Iii爰曷樔黎㌢´　　｀ⅷ
+艇艀裲f睚鳫巓襴骸　　　　贒憊
+殪幢緻I翰儂樔黎夢'”　 　 ,ｨ傾
+盥皋袍i耘蚌紕偸′　　　 雫寬I
+悗f篝嚠篩i縒縡齢　　 　 Ⅷ辨f
+輯駲f迯瓲i軌帶′　　　　　守I厖孩
+Developed by 0xHaskar
+''')
+#print(colr.BLUE + colr.BOLD + '1. First Blood'+ u'\U0001FA78')
+print(colr.RED + '''
+         +----------------------------------------------------------------+          
+   (__)  |Программное обеспечение представлено исключительно              |
+(|)(00)  |в информационных целях и предназначено только для ознакомления! | 
+ |/(__)\ |Используя программу, вы соглашаетесь с тем,                     |
+ |_/ _|  |что все действия находятся на вашей ответственности и совести!  | 
+         |Автор не несет ответственность за ваши действия!                |
+         |Вы согласны со всем, что написано на этой странице!             |
+         +----------------------------------------------------------------+
+      ''')
+
+select = input(colr.GREEN + colr.BOLD + 'Принять? yes/not: ')
+
+if (select == 'Да') or (select == 'да') or (select == 'lf') or (select == 'yes') or (select == 'Yes'):
+   os.system("clear")
+   
+   print(colr.GREEN + colr.BOLD + '''
+殪幢緻Iii爰曷樔黎㌢´　　｀ⅷ
+艇艀裲f睚鳫巓襴骸　　　　贒憊
+殪幢緻I翰儂樔黎夢'”　 　 ,ｨ傾
+盥皋袍i耘蚌紕偸′　　　 雫寬I
+悗f篝嚠篩i縒縡齢　　 　 Ⅷ辨f
+輯駲f迯瓲i軌帶′　　　　　守I厖孩
+
+SocialKraken b2.0 (Remake):
+Developed by 0xHaskar [https://github.com/0xHaskar/]
+''')
+   
+   
+   print(colr.END + colr.RED + 'Напиши help')
+   while True:
+      #select = input(colr.BLUE + colr.BOLD + '\U0001F419' + "> ")
+      select = input(colr.BLUE + colr.BOLD + 'SocialKreaken ' + "> ")
+      if select == "help":
+         print(colr.END + colr.CYAN + '''
+
+            Ghunt - Поиск информации Gmail
+                  ghunt -- запуск
+                  ghunt install -- установка 
+            #https://github.com/mxrch/GHunt
+         
+            OSINT-SAN - Бесплатный и общедоступный OSINT SAN Framework
+               osint-san -- запуск
+               osint-san install -- установка 
+            #https://github.com/Bafomet666/OSINT-SAN
+            
+            BigBro - geolocation:
+               bigbro 
+               bigbro install
+               После установки Откройте api.py и впишите туда токен ngrok
+               
+            HiddenEye - fishing:
+               hiddeneye
+               hiddeneye install
+               
+            Snoop - инструмент разведки на основе открытых данных по нику
+               snoop
+               snoop install
+               # https://github.com/snooppr/snoop
+               
+            Dnnme2 - фейк бот ТГ
+               dnnme2
+               dnnme2 install
+               # гайд -> https://telegra.ph/Sozdaem-bota-dlya-deanonimizacii-04-26
+               
+            Zehef - для отслеживания электронной почты (Нестабильный, ошибки)
+               zehef
+               zehef install
+               
+            Sherlock:
+               sherlock
+               sherlock install
+               
+            Maltego:
+               maltego - запуск
+               maltego install - установка
+               
+         Exploits:
+            В разработке!
+      ''')
+       
+      # Ghunt
+      elif select == "ghunt install" or select == "Ghunt install":
+         print (colr.END + colr.GREEN + ' Ghunt install' + colr.CYAN)
+         dir = os.getcwd()
+         os.chdir(dir + "/modules/Ghunt/")
+         os.system('gnome-terminal -- bash -c "python3 ghunt.py; exec bash"')
+         os.chdir("..")
+         os.chdir("..")     
 
 
-        # Назначаем подкатегории в Menu
-        help_menu.addAction(help_action)
-        help_menu.addAction(info_action)
-        help_menu.addAction(modules_action)
-        
-        # Назначаем подкатегории в Social
-        social_menu.addAction(beef_xss_action)
-        social_menu.addAction(zphisher_action)
-        
-        # Назначаем подкатегории в Osint
-        osint_menu.addAction(snoop_action)
-        osint_menu.addAction(ghunt_action)
-        
-        # Назначаем подкатегории в Malware
-        malware_menu.addAction(discrod_rat_action)
+      # OSINT-SAN
+      elif select == "osint-san" or select == "san":
+         print (colr.END + colr.GREEN + ' OSINT-SAN start' + colr.CYAN)
+         dir = os.getcwd()
+         os.chdir(dir + "/modules/OSINT-SAN/OSINT-SAN/")
+         os.system('gnome-terminal -- bash -c "python3 osintsan.py; exec bash"')
+         os.chdir("..")
+         os.chdir("..")
+         os.chdir("..")
 
+      elif select == "osint-san install" or select == "san install":
+         print (colr.END + colr.GREEN + ' OSINT-SAN install' + colr.CYAN)
+         dir = os.getcwd()
+         os.chdir(dir + "/modules/OSINT-SAN/")
+         os.system('gnome-terminal -- bash -c "python3 osintsan.py; exec bash"')
+         os.chdir("..")
+         os.chdir("..")
+         
+      # BigBro   
+      elif select == "bigbro":
+         print(colr.END + colr.GREEN + ' BigBro start:' + colr.CYAN)
+         dir = os.getcwd()
+         os.chdir(dir + "/modules/BigBro/Bigbro")
+         os.system("python3 start.py")
+         
+         
+      elif select == "bigbro install":
+         print(colr.END + colr.GREEN + ' BigBro install:' + colr.CYAN)
+         dir = os.getcwd()
+         os.chdir(dir + "/modules/BigBro/")
+         os.system("python3 bigbro.py")
 
-
-
-        # Создаем фрейм
-        self.frame = QFrame(self)
-        self.frame.setGeometry(50, 50, 700, 200)  # Изменен размер поля self.frame
-
-        # Создаем поле информации
-        self.information_field = QPlainTextEdit(self)  # Создаем новое поле для вывода информации
-        self.information_field.setGeometry(50, 270, 700, 200)  # Изменен размер и положение поля
-
-        # Создаем консоль (поле вывода)
-        self.console = QPlainTextEdit(self)
-        self.console.setGeometry(50, 500, 700, 200)  # Изменен размер поля self.console
-
-        # Создаем поле для ввода команд
-        self.command_input = QLineEdit(self)
-        self.command_input.setGeometry(50, 720, 500, 30)  # Изменен положение поля self.command_input
-
-        # Добавляем виджеты в главное окно
-        layout = QVBoxLayout()
-        layout.addWidget(self.frame)
-        layout.addWidget(self.information_field)
-        layout.addWidget(self.console)
-        layout.addWidget(self.command_input)
-
-        central_widget = QWidget(self)
-        central_widget.setLayout(layout)
-        self.setCentralWidget(central_widget)
-
-
-
-        # Подключаем обработчик события для запуска скрипта с новым терминалом
-        #menu
-        info_action.triggered.connect(self.run_menu_info)
-        #social
-        beef_xss_action.triggered.connect(self.run_beef_xss)
-        zphisher_action.triggered.connect(self.run_zphisher)
-        #osint
-        snoop_action.triggered.connect(self.run_snoop)
-
-        # Подключаем обработчик события для отправки команды
-        self.command_input.returnPressed.connect(self.send_command)
-
-    # функции
-    def run_beef_xss(self):
-        dir = os.getcwd()
-        os.chdir(dir + "/Modules/Social/beef-xss/")
-        os.system('gnome-terminal -- bash -c "python3 beef.py; exec bash"')
-        os.chdir("..")
-        os.chdir("..")
-        os.chdir("..")
-    
-    def run_zphisher(self):
-        dir = os.getcwd()
-        os.chdir(dir + "/Modules/Social/zphisher/")
-        subprocess.run(['python3', 'zphisher.py'])
-        os.chdir("..")
-        os.chdir("..")
-        os.chdir("..")
-    
-        
-    def run_snoop(self):
-        dir = os.getcwd()
-        os.chdir(dir + "/Modules/Osint/Snoop/")
-        #os.system('gnome-terminal -- bash -c "python3 snoop.py; exec bash"')
-        subprocess.run(['python3', 'snoop.py'])
-        os.chdir("..")
-        os.chdir("..")
-        os.chdir("..")
-    
-    def run_menu_info(self):
-        dir = os.getcwd()
-        os.chdir(dir + "/Modules/Menu/")
-        subprocess.run(['python3', 'info.py'])
-        os.chdir("..")
-        os.chdir("..")
-        # self.infowindow = InfoWindow(self)
-        # self.infowindow.show()
-
-    # консоль команды
-    def send_command(self):
-        command = self.command_input.text()
-        process = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-        output, error = process.communicate()
-        self.console.appendPlainText(output.decode())
-        self.command_input.clear()
-
-if __name__ == "__main__":
-    app = QApplication(sys.argv)
-    window = MainWindow()
-    window.show()
-    sys.exit(app.exec_())
+      # HiddenEye
+      elif select == "hiddeneye":
+         print(colr.END + colr.GREEN + ' HiddenEye start:' + colr.CYAN)
+         dir = os.getcwd()
+         os.chdir(dir + "/modules/HiddenEye/HiddenEye")
+         os.system("python3 HiddenEye.py")
+      
+      elif select == "hiddeneye install":
+               print(colr.END + colr.GREEN + ' HiddenEye install:'+ colr.CYAN)
+               dir = os.getcwd()
+               os.chdir(dir + "/modules/HiddenEye/")
+               os.system("python3 hiddeneye.py")
+      # snoop    
+      elif select == "snoop":
+         print (colr.END + colr.GREEN + ' start snoop' + colr.CYAN)
+         dir = os.getcwd()
+         os.chdir(dir + "/modules/Snoop/")
+         user = input("Username: ")
+         os.system('gnome-terminal -- bash -c "./snoop_cli ' + user +'; exec bash"')
+         os.chdir("..")
+         os.chdir("..")
+         
+      elif select == "snoop install":
+         print(colr.END + colr.GREEN + " install snoop github" + colr.CYAN)
+         dir = os.getcwd()
+         os.chdir(dir + "/modules/Snoop/")
+         os.system('gnome-terminal -- bash -c "python3 snoop.py; exec bash"')
+         os.chdir("..")
+         os.chdir("..")
+         
+      # Dnnme2
+      elif select == "dnnme2":
+         print(colr.END + colr.GREEN + " Dnnme2 start " + colr.CYAN)
+         dir = os.getcwd()
+         os.chdir(dir + "/modules/Dnnme2/Dnnme2")
+         os.system('gnome-terminal -- bash -c "python3 build.py; exec bash"')
+         os.chdir("..")
+         os.chdir("..")
+         os.chdir("..")
+      
+      elif select == "dnnme2 install":
+         print(colr.END + colr.GREEN + " Dnnme2 install" + colr.CYAN)
+         dir = os.getcwd()
+         os.chdir(dir + "/modules/Dnnme2/")
+         os.system('gnome-terminal -- bash -c "python3 dnnme2.py; exec bash"')
+         os.chdir("..")
+         os.chdir("..")
+         
+      # Zehef
+      elif select == "zehef":
+         print(colr.END + colr.GREEN + " Zehef start " + colr.CYAN)
+         dir = os.getcwd()
+         os.chdir(dir + "/modules/Zehef/Zehef")
+         os.system('gnome-terminal -- bash -c "python3 zehef.py; exec bash"')
+         os.chdir("..")
+         os.chdir("..")
+         os.chdir("..")
+      
+      elif select == "zehef install":
+         print(colr.END + colr.GREEN + " Zehef install" + colr.CYAN)
+         dir = os.getcwd()
+         os.chdir(dir + "/modules/Zehef/")
+         os.system('gnome-terminal -- bash -c "python3 zehef.py; exec bash"')
+         os.chdir("..")
+         os.chdir("..")
+         
+      # Maltego
+      elif select == "maltego":
+         print(colr.END + colr.GREEN + '\U0001F441' + ' Maltego start:' + colr.CYAN)
+         os.system('gnome-terminal -- bash -c "maltego; exec bash"')
+      
+      elif select == "maltego install":
+            print(colr.END + colr.GREEN + '\U0001F441' + ' Maltego install:' + colr.CYAN)
+            os.system('gnome-terminal -- bash -c "sudo apt install maltego; exec bash"')
+            
+      # Sherlock
+      elif select == "sherlock":
+         print(colr.END + colr.GREEN + 'Sherlock start:' + colr.CYAN)
+         os.system('gnome-terminal -- bash -c "sherlock; exec bash"')
+      
+      elif select == "sherlock install":
+         print(colr.END + colr.GREEN + 'Sherlock install:' + colr.CYAN)
+         os.system('gnome-terminal -- bash -c "sudo apt install sherlock; exec bash"')
+            
+      
+   
+elif (select == 'Нет') or (select == 'нет') or (select == 'no') or (select == 'not') or (select == 'Not'): 
+   print(colr.BLUE + colr.BOLD + 'Пока ^-^')
+   
+else: 
+   print(colr.BLUE + colr.BOLD + 'Пока ^-^')
