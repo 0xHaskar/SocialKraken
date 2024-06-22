@@ -14,18 +14,17 @@ In developing
 ```bash
 1. sudo apt update
 2. sudo apt install gnome-terminal
-3. pip3 install pyqt5 
-4. git clone https://github.com/0xHaskar/SocialKraken.git
-5. python3 start.py
+3. git clone https://github.com/0xHaskar/SocialKraken.git
+4. python3 start.py
 ```
 ### The password is encrypted:
 ```
-U1M=
+U0s=
 ```
 ### Thank you:
 ```bash
 1. https://github.com/Morsmalleo/HiddenEye
-2. https://github.com/Morsmalleo/AhMyth
+2. https://github.com/mxrch/GHunt
 
 3. https://github.com/Bafomet666/OSINT-SAN
 4. https://github.com/Bafomet666/Bigbro
